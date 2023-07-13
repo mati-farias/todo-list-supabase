@@ -36,7 +36,7 @@ export default function Navbar() {
             Home
           </a>
         </Link>
-        <div className='flex items-center ml-4'>
+        <div className='flex items-center w-full mt-4 ml-4 sm:w-auto sm:mt-0'>
           <span className='mr-2 text-sm'>Dark Mode</span>
           <Switch
             checked={darkTheme}
