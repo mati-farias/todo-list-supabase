@@ -84,7 +84,7 @@ export default function Home() {
 
   return (
     <div
-      className={`flex flex-col items-center justify-center min-h-screen px-4 py-2 sm:px-0 ${
+      className={`w-full flex flex-col items-center justify-center min-h-screen px-4 py-2 sm:px-0 ${
         darkTheme ? 'dark' : ''
       }`}>
       <h1 className={`mb-5 pb-10 text-2xl sm:text-4xl font-bold ${className}`}>
@@ -101,7 +101,7 @@ export default function Home() {
           createTask={createTask}
         />
       </div>
-      <div className='w-full sm:w-3/4 md:w-1/2 lg:w-1/3 xl:w-1/4'>
+      <div className='w-full sm:w-3/4 md:w-2/3 lg:w-2/3 xl:w-2/3'>
         {tasks.map((task) => (
           <Task
             key={task.id}
