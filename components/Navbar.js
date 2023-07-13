@@ -30,14 +30,16 @@ export default function Navbar() {
   return (
     <nav className={`p-6 shadow-md ${className}`}>
       <div className='container flex items-center justify-between mx-auto'>
-        <Link
-          href='/'
-          legacyBehavior>
-          <a className='text-xl font-bold text-gray-800 dark:text-white'>
-            Home
-          </a>
-        </Link>
-        <div className='flex items-center w-full mt-4 ml-4 sm:w-auto sm:mt-0'>
+        <div className='w-1/4'>
+          <Link
+            href='/'
+            legacyBehavior>
+            <a className='text-xl font-bold text-gray-800 dark:text-white'>
+              Home
+            </a>
+          </Link>
+        </div>
+        <div className='flex items-center justify-center w-1/2'>
           <Switch
             checked={darkTheme}
             onChange={() => setDarkTheme(!darkTheme)}
@@ -61,7 +63,7 @@ export default function Navbar() {
             className='react-switch'
           />
         </div>
-        <div>
+        <div className='flex justify-end w-1/4'>
           {!session ? (
             <>
               <Link
