@@ -5,3 +5,9 @@
 body {
   @apply text-gray-800 bg-white dark:bg-gray-900 dark:text-white;
 }
+.react-switch-icon {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

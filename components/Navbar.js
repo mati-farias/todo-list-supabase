@@ -5,6 +5,7 @@ import { useRouter } from 'next/router';
 import { useContext } from 'react';
 import { DarkThemeContext } from '../contexts/darkThemeContext';
 import Switch from 'react-switch';
+import { IoIosMoon, IoIosSunny } from 'react-icons/io';
 
 export default function Navbar() {
   const [session, setSession] = useState(null);
@@ -37,20 +38,28 @@ export default function Navbar() {
           </a>
         </Link>
         <div className='flex items-center w-full mt-4 ml-4 sm:w-auto sm:mt-0'>
-          <span className='mr-2 text-sm'>Dark Mode</span>
           <Switch
             checked={darkTheme}
             onChange={() => setDarkTheme(!darkTheme)}
             onColor='#4CAF50'
             offColor='#D3D3D3'
-            checkedIcon={false}
-            uncheckedIcon={false}
-            height={18}
-            width={36}
-            handleDiameter={16}
+            checkedIcon={
+              <IoIosSunny
+                color='black'
+                className='react-switch-icon'
+              />
+            }
+            uncheckedIcon={
+              <IoIosMoon
+                color='white'
+                className='react-switch-icon'
+              />
+            }
+            height={24}
+            width={48}
+            handleDiameter={24}
             className='react-switch'
           />
-          <span className='ml-2 text-sm'>Light Mode</span>
         </div>
         <div>
           {!session ? (
